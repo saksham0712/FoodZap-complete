@@ -17,7 +17,7 @@ const fetchAllUser = async (req, res) => {
 
 
 // this is for adding user
-
+let i = 1;
 const addUser = async (req, res) => {
   const newUser = {
     Name: req.body.Name,
@@ -25,7 +25,7 @@ const addUser = async (req, res) => {
     phoneNum: req.body.phoneNum,
     DOB: req.body.DOB,
     Password: req.body.Password,
-    serialNumber: req.body.Name.slice(0, 4) + req.body.phoneNum.slice(-4),
+    serialNumber: i,
   };
   if (req.body.college !== undefined) {
     newUser["college"] = req.body.college;
@@ -97,6 +97,7 @@ const addUser = async (req, res) => {
   if (req.body.SystemNotifications !== undefined) {
     newUser["SystemNotifications"] = req.body.SystemNotifications;
   }
+  i++;
   try {
     await model.create(newUser);
     res.status(200).json({

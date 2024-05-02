@@ -1,5 +1,10 @@
 const express = require("express");
 const Model = require("../model/restaurantModel");
+const cors = require('cors')
+
+const app = express();
+// allowing request
+app.use(cors());
 
 // fetching all the restaurants
 const fetchAllRestaurants = async (req, res) => {
@@ -15,9 +20,10 @@ const fetchAllRestaurants = async (req, res) => {
 };
 
 // creating a new restaurants
+let i = 1;
 const addRestaurants = async (req, res) => {
   const newRestaurant = {
-    SerialNo: req.body.name.slice(0, 4) + req.body.phone.slice(-4),
+    SerialNo: i,
     name: req.body.name,
     phone: req.body.phone,
     email: req.body.email,
@@ -156,6 +162,7 @@ const addRestaurants = async (req, res) => {
     newRestaurant["descriptionOfFacilityOfDj"] =
       req.body.descriptionOfFacilityOfDj;
   }
+  i++;
   try {
     await Model.create(newRestaurant);
     res.status(200).json({
@@ -239,7 +246,11 @@ const fetchaRestaurant = async (req, res) => {
     res
       .status(200)
       .json({ messege: "Restro found successfully", results: data });
-  } catch (error) {}
+  } catch (error) {
+    res
+      .status(500)
+      .json({ messege: "Restro not found successfully", error: error });
+  }
 };
 
 // update restautant user

@@ -8,9 +8,14 @@ const dishRouter = require('./routes/dishRoutes');
 const transactionRouter = require('./routes/transactionRoutes');
 const groupRouter = require('./routes/groupRoutes');
 const eventRoutes = require('./routes/eventRoutes');
-const port = 3000
+const Routers = require('./routes/guestRoutes')
+const port = 3001
+const cors = require('cors');
+
+
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
 
@@ -29,6 +34,7 @@ app.use('/dishs', dishRouter);
 app.use('/transactions', transactionRouter);
 app.use('/groups', groupRouter);
 app.use('/events', eventRoutes);
+app.use('/guests', Routers);
 
 const db = Mongoose.connect('mongodb+srv://gunnibhai123:01eVIbqRkHlLTbfi@cluster0.tx106mf.mongodb.net/')
 .then(console.log('the mongodb database is connected the dont take any tention'))
