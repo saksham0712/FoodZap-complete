@@ -1,0 +1,41 @@
+.signup{
+height: 100%;
+width: 100%;
+position: relative;
+/* color: white; */
+}
+.signup>img{
+    position: relative;
+  object-position: center;
+  object-fit: cover;
+  filter: brightness(0.9);
+  width: 80%;
+  height: 100vh;
+  filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+  transform: scale(1.5) translate(0, 5%);
+}
+.stext-muted{
+    color: white;
+}
+
+.form-container{
+    position: absolute;
+    top: 150px;
+    left: 7%;
+    width: 86%;
+    height: 95%;
+    background-color: #bbb8ab3d;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+    @media (max-width: 1200px){
+        /* .signup{
+            height: 150vh;
+        } */
+        .signup>img{
+            height: 100vh;
+        }
+    }

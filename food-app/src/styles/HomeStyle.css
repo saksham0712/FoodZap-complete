@@ -1,0 +1,225 @@
+/* home Hero 1.0 */
+.hero_section {
+  position: relative;
+  background: url("../assets/hero/hero-1.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 170px;
+  padding-bottom: 110px;
+}
+
+.hero_section .price_badge {
+  background: url("../assets/hero/price-badge-yellow.png") no-repeat center
+    center;
+  background-size: cover;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  width: 180px;
+  height: 176px;
+  text-align: center;
+}
+.hero_section .badge_text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero_section .badge_text .h4_xs {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.hero_section .badge_text .h3_lg {
+  font-size: 2.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.hero_section .hero_text h1 {
+  font-family: var(--lilita-font);
+  font-size: 7rem;
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+.hero_section .hero_text h2 {
+  font-family: var(--lilita-font);
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+.hero_section .hero_text p {
+  padding: 0 5%;
+}
+
+/* home about 2.0 */
+.about_section {
+  padding-top: 80px;
+  padding-bottom: 300px;
+  background: url("../assets/about/about-1.jpg") no-repeat center center;
+  size: cover;
+  width: 100%;
+}
+.about_section h2 {
+  font-size: 3.5rem;
+}
+.about_section p {
+  color: var(--grey);
+  padding: 20px 30px;
+  font-size: 19px;
+}
+.about_wrapper {
+  background: var(--yellow);
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.about_box .about_icon img {
+  max-width: 25%;
+}
+.about_box h4 {
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.5008px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.about_box p {
+  padding: 0;
+}
+
+/* home menu 3.0 */
+.menu_section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.menu_section .card-img-top {
+  transition: all 500ms ease-in-out;
+}
+.menu_section h2 {
+  font-size: 3.5rem;
+  color: var(--light-red);
+}
+.menu_section .para {
+  color: var(--grey);
+  padding: 10px 100px;
+  font-size: 19px;
+}
+.menu_section .item_rating i {
+  color: var(--yellow);
+  padding-right: 5px;
+}
+.menu_section .wishlist i {
+  color: var(--grey);
+  font-size: 20px;
+  cursor: pointer;
+}
+.menu_section .wishlist i:hover {
+  color: var(--light-red);
+
+}
+.menu_section .card-title{
+    font-family: var(--oswald-font);
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.menu_section .card-text{
+    color: var(--grey);
+    font-size: 15px;
+}
+.menu_section .menu_price{
+    background-color: var(--bg-coffee);
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 4px;
+}
+.menu_section .menu_price h5{
+    color: var(--yellow);
+    font-size: 1rem;
+
+}
+.menu_section .add_to_cart a{
+    background: var(--yellow);
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(100px);
+    -moz-transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+.menu_section .card:hover .card-img-top{
+    transform: scale(1.1);
+}
+.menu_section .card:hover .add_to_cart a{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.menu_section .ads_box{
+    text-align: right;
+    padding: 80px 35px 50px;
+    border-radius: 6px;
+}
+.menu_section .ads_img1{
+    background: url("../assets/menu/ads-1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.menu_section .ads_img2{
+    background: url("../assets/menu/ads-2.jpg") no-repeat center center;
+    background-size: cover;
+}
+.menu_section .ads_box h4{
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: var(--brown);
+}
+.menu_section .ads_box h5{
+    font-size: 2.375rem;
+    
+    color: var(--brown);
+}
+.menu_section .ads_box a{
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* media query mobile */
+@media (max-width: 992px) {
+  /* about 2.0 */
+  .about_section h2 {
+    font-size: 2.5rem;
+  }
+  .about_section p {
+    padding: 20px 0;
+  }
+  .about_box p {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Home Hero 1/0 */
+  .hero_section .hero_text h1 {
+    font-size: 5.5rem;
+  }
+
+  /* home menu 3.0 */
+  .menu_section .para {
+    padding: 10px 0px;
+  }
+}
