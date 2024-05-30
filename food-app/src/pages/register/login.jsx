@@ -27,7 +27,7 @@ const [LoggedIn, setLoggedIn] = useState(false)
             .then(response => {
            const resdata = response.data.user;
            const findres = resdata.find(item => item.email == dataAya.email && item.Password == dataAya.Password)
-           console.log(findres)
+           // console.log(findres)
            if(findres !== undefined){
             alert('logged inn')
             setLoggedIn(true);
