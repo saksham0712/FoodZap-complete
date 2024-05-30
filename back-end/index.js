@@ -15,6 +15,10 @@ const cors = require('cors');
 
 const app = express();
 
+app.use(cors({
+ origin: {"https://foodzap-server.vercel.app/"},
+    method: {"POST", "GET"},
+}))
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}))
