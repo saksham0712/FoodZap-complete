@@ -22,7 +22,7 @@ const SignUp = () => {
       if (response && response.data && response.data.user) {
         const resData = response.data.user;
         const findRes = resData.find((item) => item.email === formData.email && item.Password === formData.Password)
-        console.log(findRes)
+        // console.log(findRes)
         if (findRes === undefined) {
             // const formdatajson = JSON.stringify(formData);
           await axios.post('http://localhost:3001/users', formData); // Pass only formData to 
