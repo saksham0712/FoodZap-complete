@@ -23,7 +23,7 @@ const [LoggedIn, setLoggedIn] = useState(false)
 
       const onSubmit = (dataAya) => {
         
-           axios.get('http://localhost:3001/users')
+           axios.get('https://foodzap-server.vercel.app/users')
             .then(response => {
            const resdata = response.data.user;
            const findres = resdata.find(item => item.email == dataAya.email && item.Password == dataAya.Password)
