@@ -18,7 +18,7 @@ const SignUp = () => {
 
   const onSubmit = async (formData) => {
     try {
-      const response = await axios.get('http://localhost:3001/users');
+      const response = await axios.get('https://foodzap-server.vercel.app/users');
       if (response && response.data && response.data.user) {
         const resData = response.data.user;
         const findRes = resData.find((item) => item.email === formData.email && item.Password === formData.Password)
