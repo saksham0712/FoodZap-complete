@@ -1,6 +1,6 @@
 # Tasty Burger Website
 
-Welcome to Tasty Burger Website, a MERN (MongoDB, Express.js, React.js, Node.js) application for ordering delicious burgers online!
+Welcome to Tasty Burger Website, a MERN (MongoDB, Express.js, React.js, Node.js) application for ordering delicious burgers online! (ordering, cart and billing functionalities are not developed yet)
 
 ## Overview
 
